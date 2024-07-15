@@ -18,8 +18,11 @@ const EmailSection = () => {
     const JSONdata = JSON.stringify(data);
     const endpoint = "/api/send";
 
+    // Form the request for sending data to the server.
     const options = {
+      // The method is POST because we are sending data.
       method: "POST",
+      // Tell the server we're sending JSON.
       headers: {
         "Content-Type": "application/json",
       },
@@ -47,6 +50,7 @@ const EmailSection = () => {
           Let&apos;s Connect
         </h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
+          {" "}
           I&apos;m currently looking for new opportunities, my inbox is always
           open. Whether you have a question or just want to say hi, I&apos;ll
           try my best to get back to you!
